@@ -1,7 +1,8 @@
 const articles = [
   {
     title: "article 1 title",
-    body: "article 1 body"
+    // body: "article 1 body",
+    color: "red"
   },
   {
     title: "article 2 title",
@@ -10,9 +11,9 @@ const articles = [
 ];
 
 class DB {
-    getArticles() {
-        return articles;
-    }
+  getArticles() {
+    return articles;
+  }
 }
 
 module.exports = DB;

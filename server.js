@@ -10,7 +10,17 @@ const port = 3000;
 
 app.use(morgan("tiny"));
 
-app.get("/articles", (req, res) => res.send(db.getArticles()));
+app.get("/articles", (req, res) => {
+    const defaultArticle = {
+        title: 'no title',
+        body: 'no body',
+        color: 'default color',
+    }
+    const articles = db.getArticles().map(article => {
+        return {...defaultArticle, ...article};
+    })
+    res.send(articles)
+});
 app.get("/articles/title", titleController);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
