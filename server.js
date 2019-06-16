@@ -23,4 +23,7 @@ app.get("/articles", (req, res) => {
 });
 app.get("/articles/title", titleController);
 
+// TODO(chai): implement this controller
+app.get("/articles/body", (req, res) => res.send(''));
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
