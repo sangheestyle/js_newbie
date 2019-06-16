@@ -9,4 +9,10 @@ const articles = [
   }
 ];
 
-module.exports = { articles };
+class DB {
+    getArticles() {
+        return articles;
+    }
+}
+
+module.exports = DB;
