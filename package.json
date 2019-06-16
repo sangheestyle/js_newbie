@@ -2,7 +2,7 @@
   "name": "js_newbie",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sangheestyle/js_newbie/issues"
   },
-  "homepage": "https://github.com/sangheestyle/js_newbie#readme"
+  "homepage": "https://github.com/sangheestyle/js_newbie#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
