@@ -18,7 +18,10 @@ const titleController = (req, res) => {
   res.send(db.getArticles().map(({ title }) => ({ title })));
 };
 
+const articlesBodyController = (req, res) => res.send("");
+
 module.exports = {
   articlesController,
   titleController,
+  articlesBodyController,
 };
