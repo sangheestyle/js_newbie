@@ -1,16 +1,17 @@
-const express = require('express');
-const morgan = require('morgan');
-const { titleController, articlesController } = require('./controllers');
+const express = require("express");
+const morgan = require("morgan");
+const { titleController, articlesController } = require("./controllers");
 
 const app = express();
 const port = 3000;
 
-app.use(morgan('tiny'));
+app.use(morgan("tiny"));
 
-app.get('/articles', articlesController);
-app.get('/articles/title', titleController);
+app.get("/articles", articlesController);
+app.get("/articles/title", titleController);
 
 // TODO(chai): implement this controller
-app.get('/articles/body', (req, res) => res.send(''));
+app.get("/articles/body", (req, res) => res.send(""));
+//will do
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
